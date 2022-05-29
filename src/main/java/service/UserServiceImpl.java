@@ -1,5 +1,7 @@
 package service;
 
+import java.sql.SQLException;
+
 import dao.UserDao;
 import dao.UserDaoImpl;
 import pojo.UserPojo;
@@ -22,7 +24,7 @@ public class UserServiceImpl implements UserService {
 
 
 	@Override
-	public UserPojo loginUser(UserPojo userPojo) {
+	public UserPojo loginUser(UserPojo userPojo) throws SQLException {
 		// TODO Auto-generated method stub
 		return userDao.loginUser(userPojo);
 	}
