@@ -14,10 +14,10 @@ import org.apache.logging.log4j.Logger;
 
 public class UserDaoImpl implements UserDao{
 	
-	private static final java.util.logging.Logger logger = LogManager.getLogger(UserDaoImpl.class);
+	private static final Logger logger = LogManager.getLogger(UserDaoImpl.class);
 
 	@Override
-	public UserPojo loginUser(UserPojo userPojo) {
+	public UserPojo loginUser(UserPojo userPojo) throws SQLException {
 		logger.info("Entered validateUser() in dao");
 		
 		Connection conn = DBUtil.makeConnection();
